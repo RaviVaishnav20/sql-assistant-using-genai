@@ -3,7 +3,7 @@
 SQL Assistant is a web application that allows users to interact with databases using natural language queries. It consists of a Flask backend and a React frontend.
 
 ## Directory Structure
-
+```
 sql-assistant/
 ├── backend/
 │   ├── config.py
@@ -24,7 +24,7 @@ sql-assistant/
 ├── package.json
 └── README.md
 
-
+```
 ## Requirements
 
 ### Backend
