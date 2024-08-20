@@ -1,0 +1,320 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --primary-color: #3a86ff;
+  --secondary-color: #4ecdc4;
+  --accent-color: #ff6b6b;
+  --border-color: #333333;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #212121;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  position: relative;
+}
+
+.app-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chatbot {
+  height: 500px;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.message {
+  max-width: 80%;
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.user {
+  background-color: var(--primary-color);
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.bot {
+  background-color: #2a2a2a;
+  color: var(--text-color);
+  align-self: flex-start;
+}
+
+.html-content {
+  overflow: auto;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.explanation {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--secondary-color);
+}
+
+.sql-query {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+.download-btn {
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #3aafaf;
+}
+
+.input-area {
+  display: flex;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-top: 1px solid var(--border-color);
+}
+
+.input-box {
+  flex-grow: 1;
+  background-color: #333333;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 14px;
+  padding: 12px 16px;
+  margin-right: 10px;
+}
+
+.input-box:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.submit-btn,
+.clear-btn,
+.scroll-btn {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover,
+.clear-btn:hover,
+.scroll-btn:hover {
+  background-color: #2a75e6;
+}
+
+.clear-btn {
+  background-color: var(--accent-color);
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-btn:hover {
+  background-color: #ff5252;
+}
+
+.scroll-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+/* New styles for settings and database upload */
+.settings-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.settings-btn:hover {
+  background-color: #3aafaf;
+}
+
+.settings-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.database-upload {
+  margin-bottom: 20px;
+}
+
+.database-upload input[type="file"] {
+  display: none;
+}
+
+.database-upload label {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.database-upload label:hover {
+  background-color: #2a75e6;
+}
+
+.database-upload p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-form div {
+  margin-bottom: 15px;
+}
+
+.settings-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.settings-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: #333333;
+  color: var(--text-color);
+}
+
+.settings-form button {
+  align-self: flex-start;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.settings-form button:hover {
+  background-color: #2a75e6;
+}
+
+@media (max-width: 600px) {
+  .chat-container {
+    border-radius: 0;
+    height: 100vh;
+  }
+
+  .chatbot {
+    height: calc(100vh - 180px);
+  }
+
+  .message {
+    max-width: 90%;
+  }
+
+  .settings-modal {
+    width: 95%;
+    max-height: 90vh;
+  }
+}
+
+.error-message {
+  color: var(--accent-color);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.loader p {
+  margin-top: 10px;
+  color: var(--text-color);
+}

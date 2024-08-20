@@ -1,0 +1,29 @@
+Loan Default Risk Analysis:
+What percentage of loans have a status marked as 'default' or 'delinquent'? How does this vary by account or client demographic information like district or gender?
+
+Loan Amount Distribution:
+What is the average loan amount per district? Are there significant differences in the loan amounts across different districts?
+
+Client Age Distribution:
+What is the average age of clients in each district? Does a particular age group dominate in certain districts?
+
+Card Issuance Trends:
+What is the trend in card issuance over time? How does the issuance of cards correlate with the account's district?
+
+Account Duration and Loan Duration:
+Is there a correlation between the duration of an account being open and the loan duration for clients? Do longer account durations lead to longer loan durations?
+
+Order Transaction Patterns:
+How frequently do accounts place orders (order table)? Is there a pattern in terms of the banks or accounts to which orders are directed?
+
+Card Type Preferences:
+What are the most common card types issued? How does card type distribution vary by district or client demographics?
+
+Account Opening Trends:
+What is the trend in the number of accounts opened over time? Are there certain districts where account openings are increasing or decreasing significantly?
+
+Loan Repayment Status:
+What is the distribution of loan repayment statuses (e.g., fully paid, partially paid, default) across different districts?
+
+Gender-Based Financial Behavior:
+How does loan amount or card type preference vary between male and female clients?
