@@ -9,8 +9,8 @@ COPY ./backend ./backend
 COPY app.py ./
 
 # Install the Python dependencies
-COPY ./backend/requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+COPY ./backend/requirements.txt ./backend/requirements.txt
+RUN pip install --no-cache-dir -r ./backend/requirements.txt
 
 # Expose the port Flask runs on
 EXPOSE 5000
