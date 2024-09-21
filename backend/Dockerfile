@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /usr/sql-assistant-using-genai
 
 # Copy the backend directory contents into the container
 COPY ./backend ./backend
