@@ -1,4 +1,6 @@
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 AZURE_GPT_40_API_KEY = os.getenv('AZURE_GPT_40_API_KEY')
 AZURE_GPT_40_API_VERSION = os.getenv('AZURE_GPT_40_API_VERSION')
