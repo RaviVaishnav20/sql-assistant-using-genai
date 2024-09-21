@@ -2,13 +2,14 @@
 FROM node:18-alpine
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /usr/sql-assistant-using-genai
 
 # Copy the frontend directory contents into the container
 COPY ./src ./src
+COPY ./public ./public
 COPY ./package.json ./
-COPY ./App.js ./
-COPY ./App.css ./
+COPY ./package-lock.json ./
+
 
 # Install the frontend dependencies
 RUN npm install
