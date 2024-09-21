@@ -1,13 +1,16 @@
 import os
 from typing import Any, Dict, List, Callable
 from openai import AzureOpenAI
-import backend.config as cfg
+# import backend.config as cfg
+from dotenv import load_dotenv
+load_dotenv()
+
 
 def build_models():
     client = AzureOpenAI(
-        api_key=cfg.AZURE_GPT_40_API_KEY,
-        api_version=cfg.AZURE_GPT_40_API_VERSION,
-        azure_endpoint=cfg.AZURE_GPT_40_API_END_POINT
+        api_key=os.getenv('AZURE_GPT_40_API_KEY'),
+        api_version=os.getenv('AZURE_GPT_40_API_VERSION'),
+        azure_endpoint=os.getenv('AZURE_GPT_40_API_END_POINT')
     )
     return client
 
