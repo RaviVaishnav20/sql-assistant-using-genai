@@ -4,6 +4,13 @@ FROM python:3.9-slim
 # Set the working directory in the container
 WORKDIR /usr/sql-assistant-using-genai
 
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libpq-dev \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
 # Copy the backend directory contents into the container
 COPY ./backend ./backend
 COPY app.py ./
