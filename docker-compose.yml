@@ -1,5 +1,27 @@
 version: '3'
+
 services:
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: hardware_shop
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - '5432:5432'
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - '8080:80'
+
   backend:
     build:
       context: .
@@ -10,6 +32,11 @@ services:
       - ./backend:/usr/src/app
     environment:
       - FLASK_ENV=development
+      - DB_HOST=db  # Update to connect to the PostgreSQL container
+      - DB_PORT=5432
+      - DB_NAME=hardware_shop
+      - DB_USER=postgres
+      - DB_PASSWORD=admin123
 
   frontend:
     build:
@@ -19,3 +46,6 @@ services:
       - "3000:3000"
     volumes:
       - ./src:/usr/src/app
+
+volumes:
+  pg_data:
